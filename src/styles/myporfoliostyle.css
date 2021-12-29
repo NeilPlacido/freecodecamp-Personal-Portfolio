@@ -74,6 +74,10 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -86,6 +90,49 @@ html, body {
 
 h1 {
   position: relative;
-  font-size: 150px;
+  font-size: 130px;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.3px #505050;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #00ffff;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.3px #505050;
+  border-right: 2px solid #00ffff;
+  overflow: hidden;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0%, 13%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+
+@keyframes animate {
+  0%, 13%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+
+p {
+  font-size: 40px;
+  color: mediumaquamarine;
 }
 /*# sourceMappingURL=myporfoliostyle.css.map */
