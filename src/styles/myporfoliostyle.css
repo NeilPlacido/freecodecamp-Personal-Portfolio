@@ -356,13 +356,13 @@ h1::before {
 
 .contact-details {
   font-size: 30px;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: -1px 1px 1px #000000;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   text-decoration: none;
-  color: black;
+  color: #b6b6b6;
 }
 
 .contact-details:hover {
@@ -378,7 +378,6 @@ h1::before {
 }
 
 footer {
-  font-weight: 600;
   font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
