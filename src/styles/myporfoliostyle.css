@@ -43,7 +43,6 @@ html, body {
   height: 100%;
   width: 55px;
   margin: 2px 100px;
-  cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -80,7 +79,28 @@ html, body {
   text-shadow: 1px 3px 3px black;
 }
 
-.welcome-tile {
+@media (max-width: 500px) {
+  #navbar {
+    overflow: hidden;
+  }
+  #nav-image {
+    margin: 2px 215px;
+    cursor: pointer;
+  }
+  .nav-list {
+    margin: 0px;
+    visibility: hidden;
+  }
+  .nav-list li {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .nav-list a {
+    padding: 20px 13px;
+  }
+}
+
+.welcome-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +115,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   background-image: radial-gradient(#313131, #0e0e0e);
-  height: 90vh;
+  height: 100vh;
 }
 
 h1 {
@@ -115,8 +135,8 @@ h1::before {
   left: 0;
   width: 0;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#6e3310), to(#ff5e00));
-  background-image: linear-gradient(#6e3310, #ff5e00);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9b3b03), to(#ff5e00));
+  background-image: linear-gradient(#9b3b03, #ff5e00);
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
@@ -124,6 +144,12 @@ h1::before {
   overflow: hidden;
   -webkit-animation: animate 6s linear infinite;
           animation: animate 6s linear infinite;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 100px;
+  }
 }
 
 @-webkit-keyframes animate {
@@ -150,19 +176,31 @@ h1::before {
   text-shadow: 1px 3px 3px #0c0c0c;
 }
 
+@media (max-width: 500px) {
+  #profession {
+    font-size: 30px;
+  }
+}
+
 .project-section {
   text-align: center;
   background: #0e0e0e;
-  padding: 55px;
-  height: 250vh;
+  height: 100%;
 }
 
 #header-project-section {
-  padding: 50px;
+  padding: 75px 0px 30px;
   text-transform: uppercase;
   font-size: 30px;
   color: #ff5e00;
-  text-shadow: 1px 3px 3px #2e2e2e;
+  text-shadow: -8px 16px #148fad;
+}
+
+@media (max-width: 500px) {
+  #header-project-section {
+    padding: 25px;
+    font-size: 27px;
+  }
 }
 
 #project-grid {
@@ -170,17 +208,211 @@ h1::before {
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 40px;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }
 
 .project-image {
-  height: 100%;
+  height: 90%;
   width: 100%;
+  padding: 10px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (max-width: 500px) {
+  #project-grid {
+    max-width: 300px;
+  }
+  .project-image {
+    height: 88%;
+  }
+}
+
+.project-tile {
+  text-decoration: none;
+  color: #020202;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project {
+  background: #ff5e00;
+  -webkit-box-shadow: 0px 0px 15px #148fad;
+          box-shadow: 0px 0px 15px #148fad;
+  border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+  .project {
+    height: 450px;
+  }
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.code {
+  color: #ff5e00;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: black;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 1.25rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  background: #ff6600;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  margin-bottom: 50px;
+}
+
+.btn-show-all:hover {
+  background: #148fad;
+}
+
+.btn-show-all:hover i {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+}
+
+.btn-show-all i {
+  margin-left: 10px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+@media (max-width: 500px) {
+  .btn-show-all {
+    font-size: 1.25rem;
+  }
+}
+
+.contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-image: radial-gradient(#313131, #0e0e0e);
+  height: 80vh;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+#contact p {
+  font-style: italic;
+}
+
+.header-contact-section {
+  padding: 75px 0px 30px;
+  font-size: 30px;
+  color: #ff5e00;
+  text-shadow: -2px 2px #1a1a1a;
+}
+
+.contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 30px;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  text-decoration: none;
+  color: black;
+}
+
+.contact-details:hover {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+  color: #148fad;
+}
+
+@media (max-width: 500px) {
+  .contact-details {
+    font-size: 20px;
+  }
+}
+
+footer {
+  font-weight: 600;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 30px;
+  background-image: linear-gradient(200deg, #ff7519 0%, #ff5e00 100%);
+  border-top: 4px solid #3f3f3f;
+}
+
+footer a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
+footer p {
+  margin: 0px;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 500px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=myporfoliostyle.css.map */

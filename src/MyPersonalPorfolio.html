@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/myporfoliostyle.css">
+    <script src="https://kit.fontawesome.com/59556d4a99.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
 <body>
@@ -12,18 +13,18 @@
         <img id="nav-image" src="/assets/PF (hd).png" alt="Logo2">
             <ul class="nav-list">
                 <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                 <li><a href="#">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <section id="welcome-section" class="welcome-tile">
+        <section id="welcome-section" class="welcome-section">
             <h1 data-text="Hey I am Neil">Hey I am Neil</h1>
-            <p id="profession">jr. web developer</p>
+            <p id="profession">a jr. web developer</p>
         </section>
         <section id="projects" class="project-section">
             <h2 id="header-project-section">These are my sample projects</h2>
             <div id="project-grid">
-                <a class="project-tile" href="https://codepen.io/AlienneiL/pen/GRMEeVM" target="_blank">
+                <a class="project project-tile" href="https://codepen.io/AlienneiL/pen/GRMEeVM" target="_blank">
                  <img class="project-image" src="/assets/Project1.jpg" alt="Project#1">
                  <p id="project-title">
                    <span class="code">&lt;</span>
@@ -31,7 +32,7 @@
                    <span class="code">&#47;&gt;</span>
                  </p>
                 </a>
-                <a class="project-tile" href="https://codepen.io/AlienneiL/pen/GRMEeVM" target="_blank">
+                <a class="project project-tile" href="https://codepen.io/AlienneiL/pen/mdBMReJ" target="_blank">
                     <img class="project-image" src="/assets/Project2.jpg" alt="Project#2">
                     <p id="project-title">
                       <span class="code">&lt;</span>
@@ -39,7 +40,7 @@
                       <span class="code">&#47;&gt;</span>
                     </p>
                 </a>
-                <a class="project-tile" href="https://codepen.io/AlienneiL/pen/GRMEeVM" target="_blank">
+                <a class="project project-tile" href="https://codepen.io/AlienneiL/pen/ZEXvWdO" target="_blank">
                     <img class="project-image" src="/assets/Project3.jpg" alt="Project#3">
                     <p id="project-title">
                       <span class="code">&lt;</span>
@@ -48,10 +49,31 @@
                     </p>
                 </a>
             </div>
-
-
-
+            <a href="#" class="btn btn-show-all">Show All<i class="fas fa-chevron-right"></i></a>
         </section>
+        <section id="contact" class="contact-section">
+            <div class="header-contact-section">
+                <h2>Let's work together...</h2>
+                <p>Hows my coding call 199</p>
+            </div>
+
+            <div class="contact-links">
+                <a href="https://www.facebook.com/neilmatthew.placido/" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a>
+                <a id="profile-link" href="https://github.com/NeilPlacido" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/neilmatthewplacido/" target="_blank" class="btn contact-details">Linked<i class="fab fa-linkedin"></i></a>
+                <a href="mailto:placidoneilmatthew@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
+                <a href="#" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+              </div>
+        </section>
+        <footer>
+            <p>
+              All the projects and content is created for responsive web design certification.
+            </p>
+            <p>
+              &copy; Created by
+              <a class="AlienneiL" href="https://codepen.io/AlienneiL" target="_blank">@AlienneiL <i class="fab fa-codepen"></i></a>
+            </p>
+          </footer>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
